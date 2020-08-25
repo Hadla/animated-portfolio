@@ -11,4 +11,6 @@
   margin: 0;
 }
 .hide-text {
+  position: absolute;
+  z-index: 200;
 }
