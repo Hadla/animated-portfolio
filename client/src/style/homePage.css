@@ -1,0 +1,69 @@
+.App {
+  background-color: #000000;
+  height: 100vh;
+}
+
+.intro {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+.intro-text {
+  color: #ffe5db;
+}
+.enter-portfolio-btn {
+  font-size: 18px;
+  text-align: center;
+  width: 10em;
+  background: transparent;
+  color: #ffe5db;
+  opacity: 1;
+  border: 1px solid #ffe5db;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+.name-and-btn {
+  display: flex;
+  flex-direction: row;
+}
+.big-text-name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  color: rgb(243, 148, 148);
+  overflow: hidden;
+  font-size: 150px;
+  height: 200px;
+  margin: 0;
+}
+.hide-text {
+  position: absolute;
+  z-index: 200;
+}
+
+.project-btn {
+  margin-left: 30rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 38px;
+  text-align: center;
+  width: 10em;
+  background: transparent;
+  color: #ffe5db;
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-btn:hover {
+  background-color: #1a1919;
+}
