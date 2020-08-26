@@ -1,0 +1,77 @@
+.App {
+  background: linear-gradient(to left, #b18888, #583333);
+  width: 100%;
+  height: 100vh;
+}
+.flying-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.flying-dots li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(237, 223, 223, 0.603);
+  animation: animate 20s linear infinite;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 17px rgba(237, 223, 223, 0.603);
+  bottom: 150px;
+}
+.flying-dots li:nth-child(1) {
+  left: 86%;
+  width: 8px;
+  height: 8px;
+  animation-delay: 0s;
+}
+.flying-dots li:nth-child(2) {
+  left: 12%;
+  width: 3px;
+  height: 3px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+.flying-dots li:nth-child(3) {
+  left: 60%;
+  width: 15px;
+  height: 16px;
+  animation-delay: 3s;
+  animation-duration: 17s;
+}
+.flying-dots li:nth-child(4) {
+  left: 42%;
+  width: 1px;
+  height: 1px;
+  animation-delay: 4s;
+  animation-duration: 20s;
+}
+.flying-dots li:nth-child(5) {
+  left: 90%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  animation-duration: 30s;
+}
+.flying-dots li:nth-child(6) {
+  left: 7%;
+  width: 3px;
+  height: 3px;
+  animation-delay: 2s;
+  animation-duration: 15s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}

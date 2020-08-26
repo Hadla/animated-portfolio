@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, Component } from 'react';
 import '../style/homePage.css';
+import '../style/backgroundAnimation.css';
 import profileImage from '../images/profile-image.JPG';
 
-import { TweenMax, Power4, Back, TimelineMax } from 'gsap';
+import { TweenMax, Circ, Back, TimelineMax } from 'gsap';
 import { _renderComplexString } from 'gsap/gsap-core';
 
 function Home() {
@@ -16,9 +17,12 @@ function Home() {
     const hideMenuBtns = document.querySelectorAll('.menu-btns');
     tl.to(intro, 0.3, { opacity: 0 });
 
-    tl.staggerFrom(hideName, 1.2, { y: '100%', ease: Power4.easeOut }, 0.25)
-      .staggerFrom(hideMenuBtns, 1.2, { opacity: 0, duration: 1, y: 50 }, 0.25)
-      .staggerFrom(hideMenuItem, 1.5, { opacity: 0, duration: 1 }, 0.2);
+    tl.staggerFrom(hideName, 1.2, { y: '100%', ease: Back.easeOut }, 0.25).staggerFrom(
+      hideMenuItem,
+      0.5,
+      { opacity: 0, duration: 1, x: 150, ease: Circ.easeOut },
+      0.5
+    );
   });
 
   return (
@@ -28,6 +32,14 @@ function Home() {
         app = el;
       }}
     >
+      <ul className='flying-dots'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div className='intro'>
         {/* <img className='profile-image' src={profileImage}></img> */}
         <p className='intro-text'>Welcome!</p>
