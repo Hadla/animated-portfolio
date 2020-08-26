@@ -2,7 +2,9 @@
   background-color: #000000;
   height: 100vh;
 }
-
+.profile-image {
+  height: 500px;
+}
 .intro {
   text-align: center;
   position: absolute;
@@ -13,6 +15,8 @@
 }
 .intro-text {
   color: #ffe5db;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 .enter-portfolio-btn {
   font-size: 18px;
@@ -26,27 +30,47 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 30px;
+  outline: none;
+  cursor: pointer;
 }
 
-.name-and-btn {
-  display: flex;
-  flex-direction: row;
+.hidden-element {
+  margin-top: 8rem;
+  margin-left: 2rem;
 }
-.big-text-name {
+.hidden-elements {
+  display: grid;
+  grid-template-columns: 50rem 20rem;
+  grid-template-rows: auto;
+  grid-template-areas: 'hidden-element hidden-element';
+}
+.name-item {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
   position: relative;
   color: rgb(243, 148, 148);
   overflow: hidden;
-  font-size: 150px;
-  height: 200px;
+  font-size: 100px;
+  height: 100px;
   margin: 0;
+  margin-bottom: 2rem;
 }
-.hide-text {
+.hide-name {
   position: absolute;
   z-index: 200;
 }
-
+.menu-item {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 15px 20px;
+  border: 1px solid #ffe5db;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
 .project-btn {
   margin-left: 30rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -58,10 +82,6 @@
   opacity: 1;
   border: none;
   cursor: pointer;
-  outline: none;
-  padding: 20px 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .project-btn:hover {
