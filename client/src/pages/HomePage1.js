@@ -10,6 +10,10 @@ function Home() {
   let app = useRef(null);
   let tl = new TimelineMax({ paused: true });
 
+  //   function changeBackgroundColor(color) {
+  //     document.body.style.background = color;
+  //  }
+
   useEffect(() => {
     const hideName = document.querySelectorAll('#hide--name');
     const intro = document.querySelectorAll('.intro');
@@ -21,7 +25,7 @@ function Home() {
       hideMenuItem,
       0.5,
       { opacity: 0, duration: 1, x: 150, ease: Circ.easeOut },
-      0.5
+      1
     );
   });
 
@@ -42,7 +46,7 @@ function Home() {
       </ul>
       <div className='intro'>
         {/* <img className='profile-image' src={profileImage}></img> */}
-        <p className='intro-text'>Welcome!</p>
+        <p className='intro-text'>Welcome</p>
         <button
           className='enter-portfolio-btn'
           onClick={() => {

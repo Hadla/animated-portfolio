@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, Component } from 'react';
 import './style/homePage.css';
-
-import HomnePage from './pages/HomePage';
+import HomePage1 from './pages/HomePage1';
+import HomePage2 from './pages/HomePage2';
 
 function App() {
   return (
     <div>
-      <HomnePage />
+      {/* <HomePage2 /> */}
+      <HomePage2 />
     </div>
   );
 }
